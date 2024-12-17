@@ -1,0 +1,30 @@
+import React from 'react';
+
+class App extends React.Component
+{
+  constructor(props)
+  {
+    super(props)
+     this.state = { change: true };
+  }  
+    
+  render()
+  {
+    return (
+      <div>
+        <button onClick={ () => 
+           { this.setState({ change : !this.state.change});
+          }}
+         >
+          Click Here !
+          </button> 
+         {(this.state.change) ?
+             (<p> Welcome to my P'ing class</p>) :
+             (<p> Alternate welcome to P'ing class </p>)
+         }
+      </div>
+    );
+  }  
+}
+
+export default App
